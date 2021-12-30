@@ -8,7 +8,7 @@ const session = require('express-session');
 let isLogin = false
 
 const app = express();
-const PORT = 5002;
+const PORT = 80;
 
 app.set('view engine', 'hbs'); // set template engine
 
@@ -20,8 +20,8 @@ app.use(
 	session({
 		cookie: {
 			maxAge: 2 * 60 * 60 * 1000,
-			secure: true,
-			// httpOnly: true
+			secure: false,
+			httpOnly: true
 		},
 		store: new session.MemoryStore(),
 		saveUninitialized: true,
