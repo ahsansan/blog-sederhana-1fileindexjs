@@ -270,7 +270,7 @@ app.get('/logout', function(req, res){
 // 	res.send('ini halaman utama');
 // });
 
-app.listen(PORT, function(){
+app.listen(process.env.PORT || 5000, function(){
 	console.log(`Server starting on PORT: ${PORT}`);
 });
 
