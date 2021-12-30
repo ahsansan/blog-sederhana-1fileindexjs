@@ -20,8 +20,8 @@ app.use(
 	session({
 		cookie: {
 			maxAge: 2 * 60 * 60 * 1000,
-			secure: false,
-			httpOnly: true
+			secure: true,
+			// httpOnly: true
 		},
 		store: new session.MemoryStore(),
 		saveUninitialized: true,
